@@ -68,29 +68,42 @@ nav{
 @media(max-width:768px){
 
   .hero{
-    flex-direction:column;   /* stack vertically */
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
-    margin-bottom:60px;
-
-  }
-
-  .hero-content{
-    width:100%;
+    padding:120px 20px 60px;
   }
 
   .hero-image{
-    width:100%;
-    display:flex;
-    justify-content:center;
+    order:1;
+    margin-bottom:30px;
   }
 
   .hero-image img{
-    width:250px;   /* smaller image for mobile */
+    width:220px;
+  }
+
+  .hero-content{
+    order:2;
   }
 
   .hero h1{
     font-size:1.8rem;
+    line-height:1.3;
+  }
+
+  .hero h1 span{
+    display:block;   /* break name nicely */
+  }
+
+  .hero p{
+    font-size:0.9rem;
+  }
+
+  .btn{
+    width:80%;
+    max-width:250px;
   }
 
 }
@@ -1297,5 +1310,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 </script>
 </body>
 </html>
+
 
 
