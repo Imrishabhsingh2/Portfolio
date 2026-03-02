@@ -11,6 +11,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
 <style>
+  /* Navbar Base */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+}
+
+/* Right side links */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* 🔥 Mobile Fix */
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .logo img{
+    height:40px;
+  }
+
+}
   #about{
   padding-top:0px;
   padding-bottom: 0px;
@@ -1213,4 +1248,5 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 });
 </script>
 </body>
+
 </html>
