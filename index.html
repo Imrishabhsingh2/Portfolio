@@ -68,35 +68,45 @@ background:rgba(0,0,0,0.6);   /* smooth glass effect */
 }
 
 /* 🔥 MOBILE FIX */
-@media (max-width:768px){
+@media(max-width:768px){
 
   .hero{
-   
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    padding:90px 20px 50px;
+      display:flex;
+      flex-direction:row;      /* side by side */
+      align-items:center;
+      justify-content:center;
+      gap:20px;
+      padding:90px 15px 40px;
   }
 
-  .hero-image img{
-    width:220px;
-    max-width:260px;
-    height:auto;
+  .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+  }
+
+  .hero-image img{
+      width:150px;   /* smaller image */
+      height:auto;
+  }
+
+  .hero-content{
+      flex:1;
   }
 
   .hero h1{
-    font-size:1.8rem;
-    line-height:1.3;
-    margin-top:20px;
+      font-size:1.3rem;
+      line-height:1.2;
   }
 
   .hero p{
-    font-size:0.95rem;
-    margin-top:10px;
+      font-size:0.8rem;
   }
 
   .btn{
-    margin-top:20px;
+      margin-top:15px;
+      padding:8px 18px;
+      font-size:0.8rem;
   }
 
 }
@@ -851,6 +861,7 @@ footer{
   <h1>Hi, I'm <span>Rishabh Singh Somvanshi</span></h1>
   <p>Digital Marketer & Software Developer</p>
   <a href="#projects" class="btn">View Work</a>
+</div>
 </div>
 </section>
 
