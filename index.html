@@ -15,18 +15,21 @@
   nav{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
   z-index:1000;
 }
 
 .hero{
-  padding-top:120px;   /* prevents overlap */
+  padding-top:90px;   /* prevents overlap */
 }
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 8%;
+  padding:12px 6%;
+background:rgba(0,0,0,0.6);   /* smooth glass effect */
+  backdrop-filter:blur(10px);
 }
 
 /* Right side links */
@@ -68,15 +71,15 @@ nav{
 @media (max-width:768px){
 
   .hero{
-    display:flex;
+   
     flex-direction:column;
     align-items:center;
     text-align:center;
-    min-height:auto;
+    padding:90px 20px 50px;
   }
 
   .hero-image img{
-    width:70%;
+    width:220px;
     max-width:260px;
     height:auto;
   }
@@ -260,7 +263,7 @@ nav{
   display:flex;
   justify-content:center;
   align-items:center;
-  
+  margin-bottom:25px;
 }
 
 .hero-image img{
