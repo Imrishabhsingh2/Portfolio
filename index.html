@@ -12,6 +12,16 @@
 
 <style>
   /* Navbar Base */
+  nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+}
+
+.hero{
+  padding-top:100px;   /* prevents overlap */
+}
 nav{
   display:flex;
   justify-content:space-between;
@@ -29,10 +39,46 @@ nav{
 /* 🔥 Mobile Fix */
 @media(max-width:768px){
 
-  nav{
+  .hero{
     flex-direction:column;
+    justify-content:center;
     align-items:center;
-    gap:15px;
+    text-align:center;
+    padding:120px 20px 60px;
+  }
+
+  .hero-image{
+    order:1;
+    margin-bottom:30px;
+  }
+
+  .hero-image img{
+    width:220px;
+  }
+
+  .hero-content{
+    order:2;
+  }
+
+  .hero h1{
+    font-size:1.8rem;
+    line-height:1.3;
+  }
+
+  .hero h1 span{
+    display:block;   /* break name nicely */
+  }
+
+  .hero p{
+    font-size:0.9rem;
+  }
+
+  .btn{
+    width:80%;
+    max-width:250px;
+  }
+
+}
   }
 
   .nav-links{
@@ -156,8 +202,12 @@ nav{
     flex-direction:column;   /* stack vertically */
     text-align:center;
     padding:60px 20px;
+  margin-bottom:60px;
   }
-
+.hero h1{
+  font-weight:700;
+  word-break:break-word;
+}
   .hero-content{
     width:100%;
   }
@@ -1286,4 +1336,5 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
