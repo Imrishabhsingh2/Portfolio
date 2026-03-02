@@ -14,6 +14,15 @@
   /* Navbar Base */
   nav{
   position:fixed;
+  width:100%;
+  z-index:1000;
+}
+
+.hero{
+  padding-top:120px;
+}
+  nav{
+  position:fixed;
   top:0;
   width:100%;
   z-index:1000;
@@ -65,45 +74,36 @@ nav{
 }
 
 /* 🔥 MOBILE FIX */
-@media(max-width:768px){
+@media (max-width:768px){
 
   .hero{
+    display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
     text-align:center;
     padding:120px 20px 60px;
-  }
-
-  .hero-image{
-    order:1;
-    margin-bottom:30px;
+    min-height:auto;
   }
 
   .hero-image img{
-    width:220px;
-  }
-
-  .hero-content{
-    order:2;
+    width:70%;
+    max-width:260px;
+    height:auto;
   }
 
   .hero h1{
     font-size:1.8rem;
     line-height:1.3;
-  }
-
-  .hero h1 span{
-    display:block;   /* break name nicely */
+    margin-top:20px;
   }
 
   .hero p{
-    font-size:0.9rem;
+    font-size:0.95rem;
+    margin-top:10px;
   }
 
   .btn{
-    width:80%;
-    max-width:250px;
+    margin-top:20px;
   }
 
 }
@@ -1310,6 +1310,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 </script>
 </body>
 </html>
+
 
 
 
