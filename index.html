@@ -26,6 +26,16 @@ nav{
   gap:20px;
 }
 
+/* menu toggle icon (hidden by default) */
+.menu-toggle{
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
+  background:none;
+  border:none;
+  color:#fff;
+}
+
 /* 🔥 Mobile Fix */
 @media(max-width:768px){
 
@@ -33,19 +43,37 @@ nav{
     flex-direction:column;
     align-items:center;
     gap:15px;
-  }
-
-  .nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
+    position:relative; /* for toggle positioning */
   }
 
   .logo img{
     height:40px;
   }
 
+  /* hide links initially on small screens; show when active */
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px 0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:8%;
+  }
+
 }
+
 /* HERO BASE */
 .hero{
   display:flex;
@@ -463,6 +491,41 @@ nav a{
   font-weight:600;
 }
 
+/* override responsive nav rules since earlier styles may be overwritten */
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    position:relative;
+  }
+
+  .logo img{
+    height:40px;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px 0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:8%;
+  }
+}
+
 /* Hero */
 
 .hero{
@@ -792,9 +855,11 @@ footer{
 
 <nav>
   <div class="logo">
-  <img src="logos\main logo.png" alt="Rishabh Logo">
-</div>
-  <div>
+    <img src="logos\main logo.png" alt="Rishabh Logo">
+  </div>
+  <!-- hamburger / menu toggle shown on narrow screens -->
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
@@ -1282,6 +1347,26 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
   this.reset();
 });
+</script>
+
+<script>
+// mobile navigation toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+if(menuToggle && navLinks){
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // change icon to X when open
+    menuToggle.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+  });
+  // close menu when clicking outside
+  document.addEventListener('click', e => {
+    if(navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== menuToggle) {
+      navLinks.classList.remove('active');
+      menuToggle.textContent = '☰';
+    }
+  });
+}
 </script>
 </body>
 </html>
