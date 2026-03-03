@@ -51,15 +51,17 @@ nav{
     height:40px;
   }
 
-  /* always show links below logo, centered */
+  /* always show links in one row, centered */
   .nav-links{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
-    gap:12px;
+    justify-content:center;
+    gap:10px;
     width:100%;
     background:transparent;
     padding:10px 0;
+    flex-wrap:wrap;
   }
 
   .menu-toggle{
@@ -536,12 +538,14 @@ nav a{
 
   .nav-links{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
-    gap:12px;
+    justify-content:center;
+    gap:10px;
     width:100%;
     background:transparent;
     padding:10px 0;
+    flex-wrap:wrap;
   }
 
   .menu-toggle{
