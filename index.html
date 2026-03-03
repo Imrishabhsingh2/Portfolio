@@ -606,12 +606,29 @@ nav a{
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:30px;
   margin-top:40px;
+  width: 100%;
 }
 /* Mobile: force three cards per row */
-@media(max-width:600px){
+/* 🔥 FIX TOOLS MOBILE LAYOUT */
+@media(max-width:768px){
+
   .tools-grid{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);   /* 3 per row */
+    gap:12px;                                /* smaller gap */
   }
+
+  .tool-card{
+    padding:15px;                            /* reduce padding */
+  }
+
+  .tool-card img{
+    width:40px;                              /* smaller icon */
+  }
+
+  .tool-card p{
+    font-size:0.8rem;                        /* smaller text */
+  }
+
 }
 
 
