@@ -810,12 +810,23 @@ section{
 }
 
 /* Mobile */
-@media(max-width:600px){
+/* 🔥 FIX THUMBNAILS MOBILE */
+@media(max-width:768px){
+
   .thumbnail-grid{
-    grid-template-columns:1fr;
-    justify-items:center;
-    justify-content:center;
+    grid-template-columns: repeat(2, 1fr);  /* 2 per row */
+    gap:15px;
   }
+
+  .thumbnail-card{
+    border-radius:12px;
+  }
+
+  .thumbnail-card img{
+    width:100%;
+    height:auto;
+  }
+
 }
 /* Contact Section */
 #contact{
