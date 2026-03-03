@@ -11,7 +11,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
 <style>
-  /* Navbar Base */
+
+/* Navbar Base */
 nav{
   display:flex;
   justify-content:space-between;
@@ -174,8 +175,15 @@ nav{
   }
 }
 
-/* Mobile */
+/* Mobile: keep two cards per row; stack to single-col only on very narrow screens */
 @media(max-width:600px){
+  .services-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* extra small phones */
+@media(max-width:400px){
   .services-grid{
     grid-template-columns: 1fr;
   }
@@ -232,6 +240,13 @@ nav{
 
 /* Mobile */
 @media(max-width:500px){
+  .portfolio-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Extra small screens (very narrow phones) */
+@media(max-width:360px){
   .portfolio-grid{
     grid-template-columns: 1fr;
   }
@@ -343,7 +358,14 @@ nav{
 }
 
 /* Mobile */
-@media(max-width:500px){
+@media(max-width:600px){
+  .magazine-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Very small phones */
+@media(max-width:400px){
   .magazine-grid{
     grid-template-columns:1fr;
   }
@@ -560,6 +582,13 @@ nav a{
   gap:30px;
   margin-top:40px;
 }
+/* Mobile: force three cards per row */
+@media(max-width:600px){
+  .tools-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
 
 .tool-card{
   background:rgba(255,255,255,0.05);
