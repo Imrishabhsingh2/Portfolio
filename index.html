@@ -38,27 +38,34 @@ nav{
 }
 
 @media(max-width:768px){
+
   nav{
-    flex-direction:row;     /* keep in one row */
+    display:flex;
     justify-content:space-between;
     align-items:center;
     padding:12px 5%;
   }
 
+  .logo img{
+    height:32px;
+  }
+
   .nav-links{
     display:flex;
-    flex-direction:row;
-    gap:15px;
+    gap:12px;
     align-items:center;
   }
 
-  .logo img{
-    height:35px;
+  .nav-links a{
+    font-size:0.85rem;
+    margin:0;
   }
 
-  .menu-toggle{
-    display:none;
+  .theme-toggle{
+    padding:6px 12px;
+    font-size:0.75rem;
   }
+
 }
 /* HERO BASE */
 .hero{
