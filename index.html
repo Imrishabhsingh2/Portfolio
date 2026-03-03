@@ -959,6 +959,43 @@ html, body{
   max-width:100%;
   overflow-x:hidden;
 }
+/* 🔥 MOBILE HERO REFINEMENT */
+@media(max-width:768px){
+
+  .hero{
+    padding:90px 5% 40px;
+    gap:20px;
+  }
+
+  /* Reduce image size */
+  .hero-image img{
+    width:200px !important;
+  }
+
+  /* Reduce glow size */
+  .image-glow{
+    width:280px !important;
+    height:280px !important;
+    filter:blur(40px);
+  }
+
+  /* Make text compact */
+  .hero h1{
+    font-size:1.6rem;
+    line-height:1.2;
+  }
+
+  .hero p{
+    font-size:0.9rem;
+    line-height:1.4;
+  }
+
+  .btn{
+    padding:10px 20px;
+    font-size:0.85rem;
+  }
+
+}
 </style>
 </head>
 
@@ -1199,7 +1236,7 @@ html, body{
     <div class="portfolio-item">
       <img src="Posts\party template.png" alt="Ad Creative Design">
     </div>
-    
+
     <div class="portfolio-item">
       <img src="Posts\olay cream.png" alt="Ad Creative Design">
     </div>
