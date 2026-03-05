@@ -479,32 +479,33 @@ background:var(--card);
   transform:translateY(0);
 }
 :root{
-  --bg:#0f0f10;
-  --card:#1a1a1c;
-  --border:#2a2a2e;
+  --bg:#000814;          /* Ink Black */
+  --section:#001D3D;     /* Prussian Blue */
+  --card:#003566;        /* Oxford Navy */
 
-  --primary:#3a3a3f;
-  --accent:#5a5a60;
+  --primary:#FFC300;     /* School Bus Yellow */
+  --accent:#FFD60A;      /* Gold */
 
-  --text:#e4e4e7;
-  --muted:#9a9aa0;
+  --text:#f5f5f5;
+  --muted:#b8c0cc;
 
-  --gradient:linear-gradient(45deg,#3a3a3f,#5a5a60);
+  --border:rgba(255,255,255,0.08);
+  --gradient:linear-gradient(45deg,#FFC300,#FFD60A);
 }
 body.light-theme{
-  --bg:#f5f5f5;
+  --bg:#f5f7fa;
+  --section:#ffffff;
   --card:#ffffff;
-  --border:#e4e4e7;
 
-  --primary:#3a3a3f;
-  --accent:#5a5a60;
+  --primary:#003566;   /* Oxford Navy */
+  --accent:#FFC300;    /* Yellow highlight */
 
-  --text:#111111;
-  --muted:#6b6b70;
+  --text:#000814;
+  --muted:#4b5563;
 
-  --gradient:linear-gradient(45deg,#3a3a3f,#6a6a70);
+  --border:rgba(0,0,0,0.08);
+  --gradient:linear-gradient(45deg,#003566,#001D3D);
 }
-
 /* LIGHT MODE FIX */
 
 .light-theme{
@@ -617,7 +618,7 @@ body.light-theme{
 body{
   margin: 0px;
   background:var(--bg);
-  color:#fff;
+  color:var(--text);
   overflow-x:hidden;
   cursor:none;
 }
@@ -818,6 +819,7 @@ background:var(--card);
 
 /* Sections */
 section{
+background:var(--section);
   padding:40px 10%;
 }
 @media(max-width:768px){
@@ -1159,9 +1161,14 @@ html, body{
   }
 
   .btn{
-    padding:10px 20px;
-    font-size:0.85rem;
-  }
+  border:2px solid var(--primary);
+  color:var(--primary);
+}
+
+.btn:hover{
+  background:var(--primary);
+  color:#000;
+}
 }
 /* Animated Theme Toggle */
 
