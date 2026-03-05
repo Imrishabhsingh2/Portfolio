@@ -72,6 +72,25 @@ overflow-x:hidden;
 cursor:none;
 transition:background .4s,color .4s;
 }
+/* Cursor */
+.cursor{
+  position:fixed;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:var(--primary);
+  pointer-events:none;
+  mix-blend-mode:screen;
+  filter:blur(15px);
+  z-index:3000;
+}
+
+/* Light mode cursor fix */
+body.light-theme .cursor{
+  background:#000;
+  mix-blend-mode:normal;
+  opacity:0.6;
+}
 nav{
 position:fixed;
 width:100%;
