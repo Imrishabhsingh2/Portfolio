@@ -217,25 +217,37 @@ transform:translateY(-8px);
 box-shadow:0 0 25px rgba(255,195,0,0.3);
 }
 
-/* Skill bar background */
+.skill{
+margin-bottom:25px;
+}
+
+.skill p{
+margin-bottom:6px;
+font-weight:500;
+}
+
+/* Track */
 .skill-bar{
-  width:100%;
-  height:8px;
-  background:#e5e7eb;   /* light grey track */
-  border-radius:10px;
-  overflow:hidden;
+width:100%;
+height:8px;
+background:#e5e7eb;   /* light grey track */
+border-radius:10px;
+overflow:hidden;
 }
 
 /* Progress */
 .skill-progress{
-  height:100%;
-  background:var(--primary);
-  width:0;
-  border-radius:10px;
-  transition:width 1.5s ease;
-  background:linear-gradient(90deg,#FFC300,#FFD60A);
+height:100%;
+width:0;
+background:var(--primary);
+border-radius:10px;
+transition:width 1.5s ease;
 }
 
+/* Dark mode track */
+body:not(.light-theme) .skill-bar{
+background:#2a2a2a;
+}
 /* Dark mode adjustment */
 body:not(.light-theme) .skill-bar{
   background:#2a2a2a;
