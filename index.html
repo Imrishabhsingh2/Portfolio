@@ -250,10 +250,7 @@ margin-bottom:15px;
 #about{
 padding:40px 10%;
 }
-#about p{
-max-width:800px;
-line-height:1.7;
-}
+
 section{
 background:var(--section);
 padding:60px 10%;
@@ -295,7 +292,15 @@ max-width:900px;
 margin:0;
 padding-left:20px;
 }
-
+.timeline::before{
+content:"";
+position:absolute;
+left:-13.5px;
+top:0;
+width:3px;
+height:100%;
+background:var(--primary);
+}
 .timeline-item::before{
 content:"";
 position:absolute;
