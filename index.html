@@ -84,14 +84,14 @@ body.light-theme{
 --section:#ffffff;
 --card:#ffffff;
 
---primary:#2A3439;
---accent:#FFC300;
+--primary:#FFC300;
+--accent:#FFD60A;
 
---text:#111827;
+--text:#100C08;
 --muted:#4b5563;
 
 --border:rgba(0,0,0,0.08);
---gradient:linear-gradient(45deg,#FFC300,#001D3D);
+--gradient:linear-gradient(45deg,#FFC300,#fffb79);
 }
 body{
 background:var(--bg);
@@ -119,7 +119,7 @@ cursor:auto;
 }
 /* Light mode cursor fix */
 body.light-theme .cursor{
-  background:#000;
+  background:#FFC300;
   mix-blend-mode:normal;
   opacity:0.6;
 }
@@ -673,7 +673,6 @@ overflow:hidden;
 border-radius:20px;
 background:var(--card);
 border:1px solid var(--border);
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .mag-card img{
@@ -720,7 +719,7 @@ border:1px solid var(--border);
 
 .cert-item img{
 width:100%;
-height:230px;
+height:260px;
 object-fit:cover;
 display:block;
 transition:0.4s;
@@ -763,7 +762,7 @@ grid-template-columns:1fr;
 }
 
 .cert-item img{
-height:200px;
+height:260px;
 }
 }
 .project-card{
