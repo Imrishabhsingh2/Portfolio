@@ -407,11 +407,6 @@ grid-template-columns:repeat(3,1fr);
 gap:30px;
 }
 
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-}
 .portfolio-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -778,6 +773,13 @@ max-height:400px;
 .short-desc{
 margin-top:8px;
 color:var(--muted);
+}
+@media (max-width:768px){
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
 }
 .contact-wrapper{
 display:flex;
