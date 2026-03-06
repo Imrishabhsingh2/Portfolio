@@ -23,12 +23,13 @@ height:40px;
 width:auto;
 }
 .theme-btn{
-font-size:22px;
+font-size:16px;        /* smaller icon */
 background:none;
 border:none;
 cursor:pointer;
-margin-left:20px;
 color:var(--primary);
+margin-left:auto;      /* pushes it to right */
+margin-right:15px;
 transition:transform 0.4s ease;
 }
 
@@ -522,12 +523,13 @@ grid-template-columns:1fr;
     <img src="logos/main logo.png" alt="Logo">
   </div>
   <!-- hamburger / menu toggle shown on narrow screens -->
-<button id="theme-toggle" class="theme-btn">🌙</button>
-  <button class="menu-toggle" >☰</button>
+
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a
+    <a href="#projects">Projects</a>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+  <button class="menu-toggle" >☰</button>
   </div>
 </nav>
 
