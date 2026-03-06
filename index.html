@@ -18,7 +18,24 @@ padding:0;
 box-sizing:border-box;
 font-family:'Outfit',sans-serif;
 }
+.loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
 
+.loader h1{
+color:var(--primary);
+font-size:2rem;
+}
+html{
+scroll-behavior:smooth;
+}
 html,body{
 max-width:100%;
 overflow-x:hidden;
@@ -37,20 +54,7 @@ overflow-x:hidden;
 --border:rgba(255,255,255,0.08);
 --gradient:linear-gradient(45deg,#FFC300,#FFD60A);
 }
-:root{
---bg:#000000;
---section:#100C08;
---card:#2A3439;
 
---primary:#FFC300;
---accent:#FFD60A;
-
---text:#e5e5e5;
---muted:#b8c0cc;
-
---border:rgba(255,255,255,0.08);
---gradient:linear-gradient(45deg,#FFC300,#FFD60A);
-}
 body.light-theme{
 --bg:#f5f7fa;
 --section:#ffffff;
@@ -84,7 +88,11 @@ transition:background .4s,color .4s;
   filter:blur(15px);
   z-index:3000;
 }
-
+@media(max-width:768px){
+body{
+cursor:auto;
+}
+}
 /* Light mode cursor fix */
 body.light-theme .cursor{
   background:#000;
@@ -124,7 +132,9 @@ border:none;
 cursor:pointer;
 color:var(--primary);
 }
-
+body.light-theme .menu-toggle{
+color:#000;
+}
 @media(max-width:768px){
 
 .menu-toggle{
@@ -172,6 +182,11 @@ font-size:3rem;
 background:var(--gradient);
 -webkit-background-clip:text;
 color:transparent;
+}
+.hero-image img{
+max-width:100%;
+height:auto;
+border-radius:20px;
 }
 .btn{
 padding:12px 30px;
@@ -267,10 +282,6 @@ transition:width 1.5s ease;
 body:not(.light-theme) .skill-bar{
 background:#2a2a2a;
 }
-/* Dark mode adjustment */
-body:not(.light-theme) .skill-bar{
-  background:#2a2a2a;
-}
 
 .services-grid{
 display:grid;
@@ -280,8 +291,8 @@ gap:30px;
 
 .tools-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:25px;
 }
 
 .projects-grid{
@@ -308,6 +319,20 @@ transition:.4s;
 .portfolio-item:hover img{
 transform:scale(1.1);
 }
+.portfolio-item::after{
+content:"View";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+opacity:0;
+transition:.3s;
+}
+
+.portfolio-item:hover::after{
+opacity:1;
+}
 footer{
 text-align:center;
 padding:40px;
@@ -316,7 +341,9 @@ opacity:.6;
 @media (max-width:1024px){
 
 section{
-padding:60px 6%;
+padding:80px 10%;
+max-width:1200px;
+margin:auto;
 }
 
 /* Hero */
