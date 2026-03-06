@@ -243,14 +243,23 @@ width: fit-content;
 background:var(--primary);
 color:#000;
 }
+h1, h2, h3, h4{
+color:var(--primary);
+margin-bottom:15px;
+}
 section{
 background:var(--section);
-padding:60px 10%;
+padding:80px 10%;
 opacity:0;
 transform:translateY(40px);
 transition:.8s;
 }
-
+.section-title{
+background:linear-gradient(45deg,#FFC300,#FFD60A);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:25px;
+}
 section.show{
 opacity:1;
 transform:translateY(0);
@@ -448,7 +457,7 @@ padding-top:120px;
 }
 
 .hero-image img{
-width:220px;
+width:250px;
 }
 
 /* Titles */
