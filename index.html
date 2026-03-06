@@ -22,6 +22,25 @@ font-family:'Outfit',sans-serif;
 height:40px;
 width:auto;
 }
+.theme-btn{
+font-size:22px;
+background:none;
+border:none;
+cursor:pointer;
+margin-left:20px;
+color:var(--primary);
+transition:transform 0.4s ease;
+}
+
+.theme-btn.rotate{
+transform:rotate(360deg);
+}
+body.light-theme .theme-btn{
+color:#000;
+}
+.theme-btn:hover{
+transform:scale(1.2);
+}
 .loader{
 position:fixed;
 width:100%;
@@ -503,15 +522,12 @@ grid-template-columns:1fr;
     <img src="logos/main logo.png" alt="Logo">
   </div>
   <!-- hamburger / menu toggle shown on narrow screens -->
+<button id="theme-toggle" class="theme-btn">🌙</button>
   <button class="menu-toggle" >☰</button>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <label class="theme-switch">
-  <input type="checkbox" id="theme-toggle">
-  <span class="slider"></span>
-</label>
+    <a href="#projects">Projects</a
   </div>
 </nav>
 
@@ -907,13 +923,25 @@ VanillaTilt.init(document.querySelectorAll("[data-tilt]"),{
 });
 
 /* Theme Switcher */
-const toggle = document.getElementById("theme-toggle");
+const themeBtn = document.getElementById("theme-toggle");
 
-toggle.addEventListener("change", () => {
-  document.body.classList.toggle("light-theme");
+themeBtn.addEventListener("click", () => {
+
+document.body.classList.toggle("light-theme");
+
+themeBtn.classList.add("rotate");
+
+setTimeout(()=>{
+themeBtn.classList.remove("rotate");
+},400);
+
+if(document.body.classList.contains("light-theme")){
+themeBtn.textContent="☀️";
+}else{
+themeBtn.textContent="🌙";
+}
+
 });
-</script>
-  
 <script>
 document.querySelectorAll(".portfolio-item img").forEach(img=>{
   img.onclick = () => {
