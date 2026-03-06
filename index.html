@@ -169,7 +169,6 @@ color:#000;
 
 .menu-toggle{
 display:block;
-font-size:24px;
 }
 
 .nav-links{
@@ -183,12 +182,6 @@ align-items:center;
 gap:25px;
 padding:25px 0;
 display:none;
-z-index:999;
-}
-
-.nav-links a{
-margin:0;
-font-size:18px;
 }
 
 .nav-links.active{
@@ -522,18 +515,21 @@ grid-template-columns:1fr;
 <div class="cursor"></div>
 
 <nav>
-  <div class="logo">
-    <img src="logos/main logo.png" alt="Logo">
-  </div>
-  <!-- hamburger / menu toggle shown on narrow screens -->
 
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
-  <button class="menu-toggle" >☰</button>
-  </div>
+<div class="logo">
+<img src="logos/main logo.png" alt="Logo">
+</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+</div>
+
+<button id="theme-toggle" class="theme-btn">🌙</button>
+
+<button class="menu-toggle">☰</button>
+
 </nav>
 
 <section class="hero">
