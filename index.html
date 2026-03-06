@@ -578,7 +578,7 @@ font-size:0.9rem;
 /* Tools */
 .tools-grid{
 display:grid;
-grid-template-columns:repeat(6,1fr);
+grid-template-rows:repeat(6,1fr);
 gap:25px;
 margin-top:40px;
 }
@@ -586,14 +586,14 @@ margin-top:40px;
 /* Tablet */
 @media (max-width:1024px){
 .tools-grid{
-grid-template-columns:repeat(4,1fr);
+grid-template-rows:repeat(4,1fr);
 }
 }
 
 /* Mobile */
 @media (max-width:768px){
 .tools-grid{
-grid-template-columns:repeat(3,1fr);
+grid-template-rows:repeat(3,1fr);
 gap:15px;
 }
 }
@@ -601,7 +601,7 @@ gap:15px;
 /* Small Mobile */
 @media (max-width:480px){
 .tools-grid{
-grid-template-columns:repeat(2,1fr);
+grid-template-rows:repeat(2,1fr);
 }
 }
 }
