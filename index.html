@@ -67,7 +67,7 @@ overflow-x:hidden;
 :root{
 --bg:#000000;
 --section:#100C08;
---card:#2A3439;
+--card:#1C1C21;
 
 --primary:#FFC300;
 --accent:#FFD60A;
@@ -268,20 +268,6 @@ margin-bottom:15px;
 }
 #about{
 padding:40px 10%;
-}
-@media (max-width:768px){
-
-#about{
-text-align:left;
-}
-#about h2{
-text-align:left;
-}
-#about p{
-text-align:left;
-max-width:100%;
-}
-
 }
 
 section{
@@ -626,26 +612,10 @@ grid-template-columns:repeat(4,1fr);
 
 /* Mobile */
 @media (max-width:768px){
-
-.tools-container{
-grid-template-columns: repeat(3,1fr);
+.tools-grid{
+grid-template-columns:repeat(3,1fr);
 gap:15px;
 }
-
-.tool-card{
-border-radius:16px;
-text-align:center;
-padding:15px 10px;
-}
-
-.tool-card img{
-width:40px;
-}
-
-.tool-card p{
-font-size:13px;
-}
-
 }
 
 /* Small Mobile */
@@ -1151,8 +1121,8 @@ gap:30px;
     </div>
 
     <div class="tool-card">
-      <img src="logos/canva.png" alt="Canva">
-      <p>Canva</p>
+      <img src="logos/pomelli.png" alt="Pomelli">
+      <p>Google Pomelli</p>
     </div>
 
     <!-- Languages -->
