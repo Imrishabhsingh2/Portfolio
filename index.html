@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rishabh Singh Portfolio</title>
 <link rel="icon" type="image/png" href="logos/favicon.png">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -917,6 +917,48 @@ box-shadow:0 5px 15px rgba(255,195,0,0.4);
 flex-direction:column;
 gap:30px;
 }
+}
+.social-links{
+display:flex;
+justify-content: center;
+align-items: center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#1f2a30;
+color:#FFC300;
+font-size:22px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.social-links a:hover{
+background:#FFC300;
+color:#000;
+transform:scale(1.1);
+box-shadow: 0 0 15px #FFC300;
+}
+@media (max-width:768px){
+
+.social-links{
+justify-content:center;
+gap:15px;
+}
+
+.social-links a{
+width:45px;
+height:45px;
+font-size:20px;
+}
 
 }
 </style>
@@ -1300,7 +1342,29 @@ gap:30px;
 
   </div>
 </section>
+<div class="social-links">
 
+<a href="https://instagram.com/_rishabx" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/918085626546" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://behance.net/imrishabhsingh" target="_blank">
+<i class="fab fa-behance"></i>
+</a>
+
+<a href="https://twitter.com/rishabh_184" target="_blank">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="https://github.com/imrishabhsingh2" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+</div>
 <footer>© Rishabh Singh Somvanshi</footer>
 
 <script>
