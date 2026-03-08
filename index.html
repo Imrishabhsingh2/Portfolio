@@ -167,25 +167,84 @@
         }
         .tech-name { font-weight: 600; font-size: 0.95rem; color: #e0e0e0; }
 
-        /* --- EXPERIENCE & EDUCATION --- */
-        .resume-section { padding: 80px 0; }
-        .resume-header { text-align: center; margin-bottom: 50px; }
-        .resume-header h4 { color: var(--accent-orange); font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
-        .resume-header h2 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; }
-        
-        .resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-        .column-title { font-size: 1.5rem; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
-        
-        .resume-item { position: relative; padding-left: 30px; margin-bottom: 40px; border-left: 2px solid rgba(255,255,255,0.1); transition: var(--transition); }
-        .resume-item:hover { border-left-color: var(--accent-orange); }
-        
-        .resume-dot { position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--bg-dark); border: 2px solid var(--text-muted); transition: var(--transition); }
-        .resume-item:hover .resume-dot { border-color: var(--accent-orange); background: var(--accent-orange); box-shadow: 0 0 10px rgba(242, 87, 34, 0.5); }
-        
-        .resume-date { font-size: 0.85rem; color: var(--accent-orange); font-weight: 600; margin-bottom: 8px; display: block; letter-spacing: 0.5px; }
-        .resume-role { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; color: #ffffff; }
-        .resume-company { font-size: 0.95rem; color: #e0e0e0; font-weight: 600; margin-bottom: 12px; }
-        .resume-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+        /* --- EXPERIENCE SECTION --- */
+        .experience-section { padding: 100px 0; }
+        .exp-header { text-align: center; margin-bottom: 60px; }
+        .exp-header h4 { color: var(--accent-orange); font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+        .exp-header h2 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px; /* Keeps it perfectly proportioned */
+            margin: 0 auto;
+        }
+
+        .exp-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(242, 87, 34, 0.4);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .exp-date {
+            display: inline-block;
+            background: rgba(242, 87, 34, 0.1);
+            color: var(--accent-orange);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            align-self: flex-start;
+            border: 1px solid rgba(242, 87, 34, 0.2);
+            letter-spacing: 0.5px;
+        }
+
+        .exp-role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .exp-company {
+            font-size: 1rem;
+            color: #e0e0e0;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Subtle dot next to company name */
+        .exp-company::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-top: auto; /* Pushes description to the bottom naturally */
+        }
 
         /* --- SKILLS SECTION --- */
         .skills-section { padding: 80px 0; }
@@ -844,7 +903,7 @@
             .projects-grid { grid-template-columns: 1fr; }
             .tech-grid { grid-template-columns: 1fr 1fr; }
             .skills-grid { grid-template-columns: 1fr; gap: 40px; }
-            .resume-grid { grid-template-columns: 1fr; gap: 40px; }
+            .exp-grid { grid-template-columns: 1fr; }
             .detailed-services-grid { grid-template-columns: 1fr; }
             .cs-grid { grid-template-columns: 1fr; }
             .social-grid { grid-template-columns: 1fr; }
@@ -871,7 +930,7 @@
     <header id="header">
         <div class="container">
             <nav>
-                <div class="logo">Folioblox</div>
+                <div class="logo">Ridge</div>
                 
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-links">
@@ -984,48 +1043,40 @@
         </div>
     </section>
 
-    <section id="resume" class="resume-section reveal">
+    <section id="resume" class="experience-section reveal">
         <div class="container">
-            <div class="resume-header">
+            <div class="exp-header">
                 <h4>My Journey</h4>
                 <h2>Experience</h2>
             </div>
             
-            <div class="resume-grid">
-                <div class="resume-column">
-                    <h3 class="column-title">Experience</h3>
+            <div class="exp-grid">
+                <div class="exp-card">
+                    <span class="exp-date">Mar 2026 - Present</span>
+                    <h4 class="exp-role">Social Media Manager</h4>
+                    <p class="exp-company">SyncAI Labs</p>
+                    <p class="exp-desc">Managed social media platforms for a leading AI Agent platform, driving engagement and building digital presence.</p>
+                </div>
+                
+                <div class="exp-card">
+                    <span class="exp-date">Feb 2024 - Jun 2024</span>
+                    <h4 class="exp-role">Graphic Designer</h4>
+                    <p class="exp-company">Narrative Business Studio</p>
+                    <p class="exp-desc">Designed high-impact branding and social creatives tailored specifically for cafés and retail brands.</p>
+                </div>
+                
+                <div class="exp-card">
+                    <span class="exp-date">Dec 2023 - Jan 2024</span>
+                    <h4 class="exp-role">Digital Marketing Intern</h4>
+                    <p class="exp-company">Gharaaj Technologies</p>
+                    <p class="exp-desc">Managed end-to-end SEO, Meta Ads, and Google Ads campaigns to boost visibility for rental listings.</p>
+                </div>
 
-                    <div class="resume-item">
-                        <div class="resume-dot"></div>
-                        <span class="resume-date">March 2026 - Persuing</span>
-                        <h4 class="resume-role">Social Media Manager</h4>
-                        <p class="resume-company">SyncAI Labs</p>
-                        <p class="resume-desc">Managed social media platforms for a leading AI Agent platform.</p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <div class="resume-dot"></div>
-                        <span class="resume-date">Feb 2024 - Jun 2024</span>
-                        <h4 class="resume-role">Graphic Designer</h4>
-                        <p class="resume-company">Narrative Business Studio</p>
-                        <p class="resume-desc">Designed branding & social creatives for cafés and retail brands.</p>
-                    </div>
-                    
-                    <div class="resume-item">
-                        <div class="resume-dot"></div>
-                        <span class="resume-date">Dec 2023 - Jan 2024</span>
-                        <h4 class="resume-role">Digital Marketing Intern</h4>
-                        <p class="resume-company">Gharaaj Technologies</p>
-                        <p class="resume-desc">Managed SEO, Meta Ads & Google Ads campaigns for rental listings.</p>
-                    </div>
-
-                    <div class="resume-item">
-                        <div class="resume-dot"></div>
-                        <span class="resume-date">Aug 2022 - Sep 2022</span>
-                        <h4 class="resume-role">Business Analysis Trainee</h4>
-                        <p class="resume-company">Intensify Research Services</p>
-                        <p class="resume-desc">Assisted in stock advisory strategy, client communication & subscription sales. Supported research team with client insights.</p>
-                    </div>
+                <div class="exp-card">
+                    <span class="exp-date">Aug 2022 - Sep 2022</span>
+                    <h4 class="exp-role">Business Analysis Trainee</h4>
+                    <p class="exp-company">Intensify Research Services</p>
+                    <p class="exp-desc">Assisted in stock advisory and client communication sales while supporting the research team.</p>
                 </div>
             </div>
         </div>        
@@ -1312,10 +1363,10 @@
                     <h3 class="dev-title">AI Image Generator</h3>
                     <p class="dev-desc">Built an AI-based image generation web app where users enter prompts to generate images. Implemented Node.js backend with MongoDB for prompt history management.</p>
                     <div class="dev-tags">
-                        <span class="dev-tag">React JS</span>
+                        <span class="dev-tag">React.jS</span>
                         <span class="dev-tag">Node.js</span>
+                        <span class="dev-tag">Express.js</span>
                         <span class="dev-tag">MongoDB</span>
-                        <span class="dev-tag">Chart.js</span>
                     </div>
                     <div class="dev-links">
                         <a href="#" class="dev-link"><span class="icon-live"></span> Live Demo</a>
