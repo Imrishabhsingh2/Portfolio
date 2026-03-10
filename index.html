@@ -770,6 +770,67 @@
 
         .cert-link:hover { opacity: 0.8; }
 
+        /* --- CERTIFICATE MODAL (POPUP) --- */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 2000; /* Sit on top of everything, including navbar */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        /* The actual certificate image inside the modal */
+        #cert-image-display {
+            width: 100%;
+            height: 100%;
+            max-height: 85vh; /* Keep it from going off screen */
+            object-fit: contain; /* Ensure the whole certificate is visible */
+            border-radius: 8px;
+        }
+
+        /* The Close Button */
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-orange);
+        }
+
         /* --- SOFTWARE DEVELOPMENT SECTION --- */
         .dev-section { padding: 100px 0; }
         
@@ -936,9 +997,7 @@
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link">Home</a></li>
                         <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#social" class="nav-link">Social</a></li>
-                        <li><a href="#projects" class="nav-link">Work</a></li>
-                        <li><a href="#tech" class="nav-link">Tools</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                     <a href="#contact" class="btn-primary" style="display: none;">Let's Talk <span class="btn-icon">&#8594;</span></a>
@@ -970,10 +1029,10 @@
             </div>
 
             <div class="services-grid reveal">
-                <div class="service-item"><span># 01</span><p>Braning</p></div>
-                <div class="service-item"><span># 02</span><p>Champaign</p></div>
-                <div class="service-item"><span># 03</span><p>Web Design</p></div>
-                <div class="service-item"><span># 04</span><p>Development</p></div>
+                <div class="service-item"><span># 01</span><p>Brand Strategy</p></div>
+                <div class="service-item"><span># 02</span><p>Identity Design</p></div>
+                <div class="service-item"><span># 03</span><p>UI/UX Design</p></div>
+                <div class="service-item"><span># 04</span><p>Art Direction</p></div>
             </div>
         </div>
     </section>
@@ -1088,7 +1147,6 @@
                 <h4>My Expertise</h4>
                 <h2>Core Skills</h2>
             </div>
-                    <h3 class="skill-group-title">Design & Development</h3>
                     
                     <div class="skill-item">
                         <div class="skill-info"><span>Social Media Management</span><span>90%</span></div>
@@ -1278,32 +1336,28 @@
                 <div class="mag-card">
                     <img src="Magzine Design/Lifestyle Magazine.png" alt="Magazine Cover 1" class="mag-img">
                     <div class="mag-info">
-                        <span class="mag-issue">Issue #04</span>
-                        <h3 class="mag-title">Urban Architecture</h3>
+                        <h3 class="mag-title">Lorana Magazine</h3>
                     </div>
                 </div>
 
                 <div class="mag-card">
                     <img src="Magzine Design/Magazine 1.png" alt="Magazine Cover 2" class="mag-img">
                     <div class="mag-info">
-                        <span class="mag-issue">Spring 2026</span>
-                        <h3 class="mag-title">Minimalist Lifestyle</h3>
+                        <h3 class="mag-title">Fauget Fashion</h3>
                     </div>
                 </div>
 
                 <div class="mag-card">
                     <img src="Magzine Design/Elle magazine.png" alt="Magazine Cover 3" class="mag-img">
                     <div class="mag-info">
-                        <span class="mag-issue">Vol. 12</span>
-                        <h3 class="mag-title">Creative Typography</h3>
+                        <h3 class="mag-title">Elli Fashion</h3>
                     </div>
                 </div>
 
                 <div class="mag-card">
                     <img src="Magzine Design/fauget magazine.png" alt="Magazine Cover 4" class="mag-img">
                     <div class="mag-info">
-                        <span class="mag-issue">Special Edition</span>
-                        <h3 class="mag-title">Fashion Forward</h3>
+                        <h3 class="mag-title">Fauget Magazind</h3>
                     </div>
                 </div>
             </div>
@@ -1324,17 +1378,17 @@
                     <div class="cert-issuer">Gharaaj Technologies Pvt. Ltd. </div>
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Jan 2025</span>
-                        <a href="#" class="cert-link">Verify &rarr;</a>
+                        <a href="javascript:void(0);" onclick="openModal('certification/lead_gen certification.jpg')" class="cert-link">Verify &rarr;</a>
                     </div>
                 </div>
 
                 <div class="cert-card">
                     <div class="cert-icon">🏅</div>
                     <h3 class="cert-title">Search Engine Optimization</h3>
-                    <div class="cert-issuer">P.M.K.V.Y.</div>
+                    <div class="cert-issuer">P.M.K.V.Y.</div> 
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Nov 2024</span>
-                        <a href="#" class="cert-link">Verify &rarr;</a>
+                        <a href="javascript:void(0);" onclick="openModal('certification/SEO.png')" class="cert-link">Verify &rarr;</a>
                     </div>
                 </div>
 
@@ -1344,12 +1398,19 @@
                     <div class="cert-issuer">Udemy / Meta</div>
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Mar 2024</span>
-                        <a href="#" class="cert-link">Verify &rarr;</a>
+                        <a href="javascript:void(0);" onclick="openModal('certification/digital marketing certificate.jpg')" class="cert-link">Verify &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="certModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="cert-image-display" src="" alt="Certificate">
+        </div>
+    </div>
 
     <section id="software-projects" class="dev-section reveal">
         <div class="container">
@@ -1496,4 +1557,37 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
   this.reset();
 });
+</script>
+<script>
+    // 4. Certificate Modal Logic
+        const modal = document.getElementById("certModal");
+        const modalImg = document.getElementById("cert-image-display");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        // Function to open modal and set the image source
+        function openModal(imageSrc) {
+            modal.style.display = "flex"; // Make it block level before fading in
+            setTimeout(() => {
+                modal.classList.add("show"); // Add class for fade/scale animation
+            }, 10);
+            modalImg.src = imageSrc;
+        }
+
+        // Close the modal when clicking the 'X'
+        span.onclick = function() {
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Wait for fade out animation to finish
+        }
+
+        // Close the modal when clicking outside the image (on the black background)
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove("show");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
+        }
 </script>
