@@ -379,36 +379,33 @@
             transform: translateX(5px) rotate(-45deg); /* Arrow shoots up and right */
         }
 
-        /* --- SOCIAL MEDIA POSTS SECTION --- */
+       /* --- SOCIAL MEDIA POSTS SECTION  --- */
         .social-section { padding: 100px 0; }
         
         .social-header { text-align: center; margin-bottom: 60px; }
         .social-header h4 { color: var(--accent-orange); font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
         .social-header h2 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
 
-        .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .social-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; /* Tighter gap for a gallery feel */
+        }
 
         .social-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 20px;
+            position: relative;
+            border-radius: 16px;
             overflow: hidden;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            aspect-ratio: 1 / 1; /* Makes the images perfect squares */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
         }
 
         .social-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(242, 87, 34, 0.4);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        }
-
-        .social-img-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4/3;
-            overflow: hidden;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(242, 87, 34, 0.2);
+            border: 1px solid var(--accent-orange);
         }
 
         .social-img {
@@ -419,79 +416,7 @@
         }
 
         .social-card:hover .social-img {
-            transform: scale(1.08);
-        }
-
-        .social-platform-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(15, 15, 17, 0.8);
-            backdrop-filter: blur(5px);
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .social-content {
-            padding: 24px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .social-date {
-            font-size: 0.8rem;
-            color: var(--accent-orange);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .social-text {
-            font-size: 0.95rem;
-            color: #e0e0e0;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .social-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 16px;
-            margin-top: auto;
-        }
-
-        .social-stats {
-            display: flex;
-            gap: 16px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .social-stats span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .social-link {
-            color: #fff;
-            font-size: 0.85rem;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-
-        .social-card:hover .social-link {
-            color: var(--accent-orange);
+            transform: scale(1.08); /* Smooth zoom effect on hover */
         }
 
         /* --- THUMBNAILS SECTION --- */
@@ -1236,58 +1161,28 @@
             </div>
             
             <div class="social-grid">
-                <a href="#" class="social-card">
-                    <div class="social-img-wrapper">
-                        <span class="social-platform-badge">Instagram</span>
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" alt="Social Post Image 1" class="social-img">
-                    </div>
-                    <div class="social-content">
-                        <div class="social-date">March 5, 2026</div>
-                        <p class="social-text">Just wrapped up a massive rebranding project for an upcoming fintech startup. Thrilled to see these designs go live! 🚀🎨 #BrandIdentity #FintechDesign</p>
-                        <div class="social-footer">
-                            <div class="social-stats">
-                                <span>❤️ 245</span>
-                                <span>💬 18</span>
-                            </div>
-                            <span class="social-link">View Post &rarr;</span>
-                        </div>
-                    </div>
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/nike post design.png" alt="Social Post 1" class="social-img">
                 </a>
 
-                <a href="#" class="social-card">
-                    <div class="social-img-wrapper">
-                        <span class="social-platform-badge">LinkedIn</span>
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" alt="Social Post Image 2" class="social-img">
-                    </div>
-                    <div class="social-content">
-                        <div class="social-date">February 28, 2026</div>
-                        <p class="social-text">Consistency is the key to scaling your organic reach. Here are 3 strategies I use to 10x engagement for my clients in the B2B space. 👇 #MarketingTips #SEO</p>
-                        <div class="social-footer">
-                            <div class="social-stats">
-                                <span>👍 412</span>
-                                <span>💬 56</span>
-                            </div>
-                            <span class="social-link">View Post &rarr;</span>
-                        </div>
-                    </div>
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/rolex green post.png" alt="Social Post 2" class="social-img">
                 </a>
 
-                <a href="#" class="social-card">
-                    <div class="social-img-wrapper">
-                        <span class="social-platform-badge">Twitter / X</span>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" alt="Social Post Image 3" class="social-img">
-                    </div>
-                    <div class="social-content">
-                        <div class="social-date">February 15, 2026</div>
-                        <p class="social-text">A great UI doesn't just look pretty; it solves the user's problem before they even realize they have one. Form follows function, always. 💡💻 #UXDesign</p>
-                        <div class="social-footer">
-                            <div class="social-stats">
-                                <span>❤️ 890</span>
-                                <span>🔁 124</span>
-                            </div>
-                            <span class="social-link">View Post &rarr;</span>
-                        </div>
-                    </div>
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/JBL Post Design.png" alt="Social Post 3" class="social-img">
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/party template.png" alt="Social Post 4" class="social-img">
+                </a>
+
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/olay cream.png" alt="Social Post 5" class="social-img">
+                </a>
+
+                <a href="#" target="_blank" class="social-card">
+                    <img src="Posts/Model Post Design.png" alt="Social Post 6" class="social-img">
                 </a>
             </div>
         </div>
@@ -1378,14 +1273,14 @@
                     <div class="cert-issuer">Gharaaj Technologies Pvt. Ltd. </div>
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Jan 2025</span>
-                        <a href="javascript:void(0);" onclick="openModal('certification/lead_gen certification.jpeg')" class="cert-link">Verify &rarr;</a>
+                        <a href="javascript:void(0);" onclick="openModal('certification/lead_gen certificate.jpeg')" class="cert-link">Verify &rarr;</a>
                     </div>
                 </div>
 
                 <div class="cert-card">
                     <div class="cert-icon">🏅</div>
                     <h3 class="cert-title">Search Engine Optimization</h3>
-                    <div class="cert-issuer">P.M.K.V.Y.</div> 
+                    <div class="cert-issuer">P.M.K.V.Y.</div>
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Nov 2024</span>
                         <a href="javascript:void(0);" onclick="openModal('certification/SEO.png')" class="cert-link">Verify &rarr;</a>
