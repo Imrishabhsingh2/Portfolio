@@ -1378,7 +1378,7 @@
                     <div class="cert-issuer">Gharaaj Technologies Pvt. Ltd. </div>
                     <div class="cert-footer">
                         <span class="cert-date">Issued: Jan 2025</span>
-                        <a href="javascript:void(0);" onclick="openModal('certification/lead_gen certification.jpg')" class="cert-link">Verify &rarr;</a>
+                        <a href="javascript:void(0);" onclick="openModal('certification/lead_gen certification.jpeg')" class="cert-link">Verify &rarr;</a>
                     </div>
                 </div>
 
@@ -1532,32 +1532,34 @@ function toggleProject(card){
   card.classList.toggle("active");
 }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-(function(){
-  emailjs.init("iX2zP4AVjTf2l6xVa");  // 🔁 replace this with your public key
-})();
-</script>
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Your EmailJS Public Key
+            emailjs.init("iX2zP4AVjTf2l6xVa"); 
+        })();
 
-  emailjs.sendForm(
-    "service_gmail",      // 🔁 replace
-    "template_xpiheup",     // 🔁 replace
-    this
-  )
-  .then(function() {
-    alert("Message Sent Successfully 🚀");
-  }, function(error) {
-    alert("Failed to send message ❌");
-    console.log(error);
-  });
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...'; // UX improvement
 
-  this.reset();
-});
-</script>
+            // REPLACE 'service_gmail' AND 'template_xpiheup' WITH YOUR ACTUAL IDs IF DIFFERENT
+            emailjs.sendForm('service_gmail', 'template_xpiheup', this)
+                .then(function() {
+                    alert('Message sent successfully! 🚀');
+                    document.getElementById('contact-form').reset(); // Clear the form
+                    btn.innerText = originalText;
+                }, function(error) {
+                    alert('Failed to send message ❌ Please check your EmailJS setup.');
+                    console.log('FAILED...', error);
+                    btn.innerText = originalText;
+                });
+        });
+    </script>
 <script>
     // 4. Certificate Modal Logic
         const modal = document.getElementById("certModal");
