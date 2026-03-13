@@ -153,16 +153,22 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(242, 87, 34, 0.1);
         }
-        .tech-icon {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 15px;
-            letter-spacing: -2px;
+        .tech-icon-mask {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.8);
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
             transition: var(--transition);
+            margin: 0 auto 15px auto;
         }
-        .tech-card:hover .tech-icon {
-            color: var(--accent-orange);
+
+        .tech-card:hover .tech-icon-mask {
+            background-color: var(--accent-orange);
             transform: scale(1.1);
         }
         .tech-name { font-weight: 600; font-size: 0.95rem; color: #e0e0e0; }
@@ -243,7 +249,7 @@
             font-size: 0.95rem;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-top: auto; /* Pushes description to the bottom naturally */
+            margin-top: auto;
         }
 
         /* --- SKILLS SECTION --- */
@@ -1000,31 +1006,40 @@
             </div>
             <div class="tech-grid">
                 <div class="tech-card">
-                    <div class="tech-icon">Ads</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/googleads'); mask-image: url('https://cdn.simpleicons.org/googleads');"></div>
                     <div class="tech-name">Google Ads</div>
                 </div>
+                
                 <div class="tech-card">
-                    <div class="tech-icon">Ps</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobephotoshop.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobephotoshop.svg');"></div>
                     <div class="tech-name">Photoshop</div>
                 </div>
+                
                 <div class="tech-card">
-                    <div class="tech-icon">Ai</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeillustrator.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeillustrator.svg');"></div>
                     <div class="tech-name">Illustrator</div>
                 </div>
+                
                 <div class="tech-card">
-                    <div class="tech-icon">&lt;/&gt;</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/html5'); mask-image: url('https://cdn.simpleicons.org/html5');"></div>
                     <div class="tech-name">HTML & CSS</div>
                 </div>
+                
                 <div class="tech-card">
-                    <div class="tech-icon">Js</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/javascript'); mask-image: url('https://cdn.simpleicons.org/javascript');"></div>
                     <div class="tech-name">JavaScript</div>
                 </div>
+                
                 <div class="tech-card">
-                    <div class="tech-icon">Re</div>
-                    <div class="tech-name">React JS</div>
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/react'); mask-image: url('https://cdn.simpleicons.org/react');"></div>
+                    <div class="tech-name">MERN Stack</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg');"></div>
+                    <div class="tech-name">Claude</div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section id="resume" class="experience-section reveal">
