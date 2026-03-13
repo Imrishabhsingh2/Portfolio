@@ -136,8 +136,8 @@
         
         .tech-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-            gap: 20px; 
+            grid-template-columns: repeat(8, 1fr); /* Forces exactly 8 icons in a row */
+            gap: 15px; /* Slightly reduced gap to fit them perfectly */
         }
         .tech-card { 
             background: var(--bg-card); 
@@ -1021,6 +1021,11 @@
                 </div>
                 
                 <div class="tech-card">
+                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg');"></div>
+                    <div class="tech-name">Claude</div>
+                </div>
+                
+                <div class="tech-card">
                     <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/html5'); mask-image: url('https://cdn.simpleicons.org/html5');"></div>
                     <div class="tech-name">HTML & CSS</div>
                 </div>
@@ -1033,11 +1038,6 @@
                 <div class="tech-card">
                     <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.simpleicons.org/react'); mask-image: url('https://cdn.simpleicons.org/react');"></div>
                     <div class="tech-name">MERN Stack</div>
-                </div>
-
-                <div class="tech-card">
-                    <div class="tech-icon-mask" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg');"></div>
-                    <div class="tech-name">Claude</div>
                 </div>
 
                 <div class="tech-card">
