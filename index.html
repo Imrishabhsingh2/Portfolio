@@ -857,13 +857,85 @@
         .dev-link:hover::before { color: var(--accent-orange); transition: color 0.3s ease; }
 
         /* --- CONTACT SECTION --- */
-        .contact-section { padding: 80px 0; background-color: var(--bg-card); border-top: 1px solid rgba(255,255,255,0.05); }
-        .contact-container { max-width: 600px; margin: 0 auto; text-align: center; }
-        .contact-container h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 16px; border-radius: 10px; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: white; font-family: inherit; font-size: 1rem; transition: var(--transition); }
-        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-orange); }
-        .contact-form textarea { resize: vertical; min-height: 120px; }
+        /* --- CONTACT SECTION (FLAT SPLIT LAYOUT) --- */
+        .contact-section { padding: 100px 0; background-color: var(--bg-card); border-top: 1px solid rgba(255,255,255,0.05); }
+        
+        .contact-header { text-align: center; margin-bottom: 60px; }
+        .contact-header h4 { color: var(--accent-orange); font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+        .contact-header h2 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1.2fr; 
+            gap: 60px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            align-items: center;
+        }
+
+        /* Left Side: Seamless Info (No Cards) */
+        .contact-info { display: flex; flex-direction: column; gap: 30px; }
+        
+        .info-card {
+            display: flex;
+            align-items: center; /* This perfectly centers the text vertically with the icon */
+            gap: 20px;
+            background: transparent; 
+            padding: 10px 0; 
+            border: none; 
+            transition: var(--transition);
+        }
+        
+        .info-card:hover {
+            transform: translateX(10px); /* Smooth slide right on hover */
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(242, 87, 34, 0.1);
+            color: var(--accent-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-card h4 { font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
+        .info-card p, .info-card a { color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
+        .info-card a:hover { color: var(--accent-orange); }
+
+        /* Right Side: Seamless Form (No Wrapper Card) */
+        .contact-form-wrapper {
+            background: transparent; /* Removed background */
+            padding: 0; /* Removed padding */
+            border: none; /* Removed border */
+            box-shadow: none; /* Removed shadow */
+        }
+
+        .contact-form { display: flex; flex-direction: column; gap: 20px; }
+        
+        .contact-form input, .contact-form textarea { 
+            width: 100%; 
+            padding: 16px 20px; 
+            border-radius: 12px; 
+            background: var(--bg-dark); /* Contrast against the section background */
+            border: 1px solid rgba(255,255,255,0.05); 
+            color: white; 
+            font-family: inherit; 
+            font-size: 1rem; 
+            transition: var(--transition); 
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus { 
+            outline: none; 
+            border-color: var(--accent-orange); 
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .contact-form textarea { resize: vertical; min-height: 150px; }
 
         /* --- FOOTER --- */
         footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
@@ -902,6 +974,7 @@
             .thumb-grid { grid-template-columns: 1fr; }
             .mag-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
             .cert-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 
             /* Mobile Nav */
             .hamburger { display: block; position: relative; z-index: 1002; }
@@ -1374,17 +1447,41 @@ fill="currentColor" viewBox="0 0 24 24" >
     </section>
 
     <section id="contact" class="contact-section reveal">
-        <div class="container contact-container">
-            <h4 style="color: var(--accent-orange); margin-bottom: 10px;">Get In Touch</h4>
-            <h2>Let's build something<br>meaningful together.</h2>
+        <div class="container">
+            <div class="contact-header">
+                <h4>Get In Touch</h4>
+                <h2>Let's build something<br>meaningful together.</h2>
+            </div>
             
-            <form id="contact-form" class="contact-form">
-                <input type="text" name="from_name" placeholder="Your Name" required>
-                <input type="email" name="reply_to" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-                <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%;">Send Message</button>
-            </form>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <a href="mailto:imrishabhsingh2@gmail.com" style="font-size: 1.1rem; font-weight: 500;">imrishabhsingh2@gmail.com</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <a href="tel:+918085626546" style="font-size: 1.1rem; font-weight: 500;">+91 80856 26546</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <p style="font-size: 1.1rem; font-weight: 500; margin: 0;">Indore, Madhya Pradesh</p>
+                    </div>
 
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" name="from_name" placeholder="Your Name" required>
+                        <input type="email" name="reply_to" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+                        <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%; padding: 14px;">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
