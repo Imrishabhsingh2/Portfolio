@@ -873,35 +873,34 @@
             align-items: center;
         }
 
-        /* Left Side: Seamless Info (No Cards) */
-        .contact-info { display: flex; flex-direction: column; gap: 30px; }
+                /* Left Side: Contact Details (Single Row Layout) */
+        .contact-info { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; /* Reduced from 30px to bring rows closer */
+        }
         
         .info-card {
             display: flex;
-            align-items: center; /* This perfectly centers the text vertically with the icon */
-            gap: 20px;
+            align-items: center; 
+            gap: 15px; /* Reduced gap between the icon and the text */
             background: transparent; 
-            padding: 10px 0; 
+            padding: 5px 0; /* Reduced vertical padding */
             border: none; 
             transition: var(--transition);
         }
         
         .info-card:hover {
-            transform: translateX(10px); /* Smooth slide right on hover */
+            transform: translateX(10px); 
         }
 
         .info-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(242, 87, 34, 0.1);
             color: var(--accent-orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem; /* Made the icon slightly larger since the circle is gone */
             flex-shrink: 0;
+            /* Removed the background, border-radius, width, and height */
         }
+
 
         .info-card h4 { font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
         .info-card p, .info-card a { color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
