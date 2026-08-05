@@ -1455,6 +1455,10 @@ a:focus-visible, button:focus-visible {
   .section {
     padding: 4rem 0;
   }
+  .work-page-banner {
+    padding-top: 7rem;
+    padding-bottom: 1.5rem;
+  }
   .services__grid,
   .exp__grid,
   .skills__bars,
