@@ -44,7 +44,6 @@ a:focus-visible, button:focus-visible {
 /* Hero Container */
 .hero {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
   width: 100%;
   height: 100vh;
@@ -294,7 +293,7 @@ a:focus-visible, button:focus-visible {
 
 /* Layer 5: Navigation Header */
 .hero__header {
-  position: fixed !important;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -406,7 +405,11 @@ a:focus-visible, button:focus-visible {
   }
 
   .hero__nav {
+    width: auto;
+    max-width: none;
+    margin: 0;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
+    gap: 1rem;
   }
 
   .section {
@@ -926,6 +929,50 @@ a:focus-visible, button:focus-visible {
   transform: scaleX(1);
 }
 
+.work-page-banner {
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  border-bottom: none;
+}
+
+.work-page-banner__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-editorial);
+}
+
+.work-page-banner__back:hover {
+  color: var(--ink);
+}
+
+.work-page-banner__title {
+  margin-top: 0.5rem;
+}
+
+.work__preview-text {
+  max-width: 42rem;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.work__grid--preview {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.work__preview-cta {
+  display: flex;
+  justify-content: center;
+}
+
 .work__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1433,7 +1480,7 @@ a:focus-visible, button:focus-visible {
   transition: opacity 1.1s var(--ease-editorial), transform 1.1s var(--ease-editorial);
 }
 
-.hero__header {
+.hero .hero__header {
   opacity: 0;
   transform: translateY(-16px);
   transition: opacity 0.9s var(--ease-editorial) 0.1s, transform 0.9s var(--ease-editorial) 0.1s;
