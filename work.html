@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Showcase — Rishabh Singh</title>
+  <meta name="description" content="Full creative portfolio of Rishabh Singh — social creatives, brand identities, YouTube thumbnails, and print editorials.">
+
+  <!-- Google Fonts: Albert Sans & Fragment Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fragment+Mono&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- JavaScript Module -->
+  <script type="module" src="scripts/glass-hero.js" defer></script>
+  <script src="scripts/work-filter.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Header (same as landing page, links point back to index.html sections) -->
+  <header class="hero__header">
+    <nav class="hero__nav" aria-label="Main Navigation">
+      <!-- Monogram + Name -->
+      <a href="index.html" class="hero__brand">
+        <div class="hero__monogram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke-opacity="0.3"></circle>
+            <path d="M9 17V7h4.5a3.5 3.5 0 0 1 0 7H9"></path>
+            <path d="M13 14l3.5 3"></path>
+          </svg>
+        </div>
+        <span class="hero__brand-name">RISHABH SINGH</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hero__links">
+        <a href="index.html#about" class="hero__link">About</a>
+        <a href="index.html#services" class="hero__link">Services</a>
+        <a href="index.html#experience" class="hero__link">Experience</a>
+        <a href="index.html#skills" class="hero__link">Skills</a>
+        <a href="work.html" class="hero__link">Work</a>
+        <a href="index.html#software" class="hero__link">Software</a>
+      </div>
+
+      <!-- Right Action Button (Desktop) -->
+      <a href="index.html#contact" class="hero__btn hero__btn--nav">
+        Let's talk
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-toggle" class="hero__hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hero__hamburger-bar"></span>
+        <span class="hero__hamburger-bar"></span>
+        <span class="hero__hamburger-bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hero__mobile-drawer" aria-hidden="true">
+      <div class="hero__mobile-links">
+        <a href="index.html#about" class="hero__mobile-link">About</a>
+        <a href="index.html#services" class="hero__mobile-link">Services</a>
+        <a href="index.html#experience" class="hero__mobile-link">Experience</a>
+        <a href="index.html#skills" class="hero__mobile-link">Skills</a>
+        <a href="work.html" class="hero__mobile-link">Work</a>
+        <a href="index.html#software" class="hero__mobile-link">Software</a>
+      </div>
+      <a href="index.html#contact" class="hero__btn hero__btn--mobile-cta">
+        Let's talk
+      </a>
+    </div>
+  </header>
+
+  <!-- Simple page banner (lightweight, no parallax hero) -->
+  <section class="section work-page-banner">
+    <div class="container">
+      <a href="index.html" class="work-page-banner__back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to home</span>
+      </a>
+      <span class="section__tag">FEATURED CREATIVES</span>
+      <h1 class="section__title work-page-banner__title">Full Work Showcase</h1>
+      <p class="work__preview-text">Social creatives, brand identities, YouTube thumbnails, and print editorials — filter by category to browse the complete gallery.</p>
+    </div>
+  </section>
+
+  <!-- WORK & CREATIVE PORTFOLIO SHOWCASE (FULL GALLERY) -->
+  <section id="work" class="section section--work">
+    <div class="container">
+
+      <!-- Category Filter Tabs -->
+      <div class="work__tabs">
+        <button class="work__tab is-active" data-filter="social">Social Posts</button>
+        <button class="work__tab" data-filter="logos">Logos</button>
+        <button class="work__tab" data-filter="thumbnails">Thumbnails</button>
+        <button class="work__tab" data-filter="magazines">Print &amp; Mag</button>
+      </div>
+
+      <!-- Work Grid -->
+      <div class="work__grid">
+        <!-- Social Creatives -->
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/nike post design.jpg" alt="Nike Post Design" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">Nike Performance Ad</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/rolex green post.png" alt="Rolex Green Post" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">Rolex Luxury Campaign</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/JBL Post Design.png" alt="JBL Post Design" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">JBL Audio Poster</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/olay cream.png" alt="Olay Cream" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">Olay Beauty Product</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/party template.png" alt="Party Template" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">Event Promotion Template</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="social">
+          <div class="work-item__image-wrap">
+            <img src="Posts/Model Post Design.jpg" alt="Model Post Design" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Social Creative</span>
+            <h4 class="work-item__title">Fashion Model Creative</h4>
+          </div>
+        </div>
+
+        <!-- Logos -->
+        <div class="work-item" data-category="logos">
+          <div class="work-item__image-wrap">
+            <img src="Posts/yoga logo.png" alt="Yoga Logo Design" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Brand Identity</span>
+            <h4 class="work-item__title">Yoga Studio Logo</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="logos">
+          <div class="work-item__image-wrap">
+            <img src="Posts/Coffee cup logo.png" alt="Coffee Cup Logo" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Brand Identity</span>
+            <h4 class="work-item__title">Café Cup Identity</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="logos">
+          <div class="work-item__image-wrap">
+            <img src="Posts/jewelry logo.png" alt="Jewelry Logo" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Brand Identity</span>
+            <h4 class="work-item__title">Luxury Jewelry Mark</h4>
+          </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="work-item" data-category="thumbnails">
+          <div class="work-item__image-wrap">
+            <img src="Posts/Broadcast Thumbnail.png" alt="Broadcast Thumbnail" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">YouTube Visual</span>
+            <h4 class="work-item__title">Broadcast Podcast Thumbnail</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="thumbnails">
+          <div class="work-item__image-wrap">
+            <img src="Posts/Scary Moments Thumbnail.png" alt="Scary Moments Thumbnail" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">YouTube Visual</span>
+            <h4 class="work-item__title">Scary Moments Feature</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="thumbnails">
+          <div class="work-item__image-wrap">
+            <img src="Posts/Silence Thumbnail.png" alt="Silence Thumbnail" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">YouTube Visual</span>
+            <h4 class="work-item__title">Silence Film Cover</h4>
+          </div>
+        </div>
+
+        <!-- Magazine Covers -->
+        <div class="work-item" data-category="magazines">
+          <div class="work-item__image-wrap">
+            <img src="Magzine Design/Lifestyle Magazine.png" alt="Lifestyle Magazine" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Print Editorial</span>
+            <h4 class="work-item__title">Lorana Beauty Cover</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="magazines">
+          <div class="work-item__image-wrap">
+            <img src="Magzine Design/Magazine 1.png" alt="Magazine 1" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Print Editorial</span>
+            <h4 class="work-item__title">Fauget Fashion Spread</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="magazines">
+          <div class="work-item__image-wrap">
+            <img src="Magzine Design/Elle magazine.png" alt="Elle Magazine" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Print Editorial</span>
+            <h4 class="work-item__title">Elli Fashion Layout</h4>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="magazines">
+          <div class="work-item__image-wrap">
+            <img src="Magzine Design/fauget magazine.png" alt="Fauget Magazine" loading="lazy">
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Print Editorial</span>
+            <h4 class="work-item__title">Fauget Hadid Editorial</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="site-footer" class="site-footer">
+    <div class="site-footer__marquee-wrap xs-reveal" aria-hidden="true">
+      <div class="site-footer__marquee-track">
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+        <span class="site-footer__marquee-item">Let's create something great</span>
+        <span class="site-footer__marquee-item">Available for freelance</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="site-footer__top xs-reveal">
+        <a href="index.html" class="site-footer__brand">
+          <span class="hero__monogram" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" stroke-opacity="0.3"></circle>
+              <path d="M9 17V7h4.5a3.5 3.5 0 0 1 0 7H9"></path>
+              <path d="M13 14l3.5 3"></path>
+            </svg>
+          </span>
+          <span>RISHABH SINGH</span>
+        </a>
+        <p class="site-footer__tagline">Scaling brands with data-driven growth marketing and clean, intuitive creative systems.</p>
+        <div class="site-footer__socials">
+          <a href="https://linkedin.com/in/imrishabhsingh" target="_blank" rel="noreferrer" class="social-pill">LinkedIn</a>
+          <a href="https://twitter.com/rishabh_184" target="_blank" rel="noreferrer" class="social-pill">Twitter</a>
+          <a href="https://github.com/imrishabhsingh2" target="_blank" rel="noreferrer" class="social-pill">GitHub</a>
+        </div>
+      </div>
+
+      <div class="site-footer__grid xs-reveal">
+        <div class="footer-col" style="--d:0;">
+          <h4 class="footer-col__title">Sitemap</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+        </div>
+
+        <div class="footer-col" style="--d:1;">
+          <h4 class="footer-col__title">More</h4>
+          <a href="work.html">Work</a>
+          <a href="index.html#software">Software</a>
+          <a href="index.html#certifications">Certificates</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-col" style="--d:2;">
+          <h4 class="footer-col__title">Get in Touch</h4>
+          <a href="mailto:imrishabhsingh2@gmail.com">imrishabhsingh2@gmail.com</a>
+          <a href="tel:+918085626546">+91 80856 26546</a>
+          <span class="footer-col__static">Indore, Madhya Pradesh, India</span>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom xs-reveal">
+        <span class="site-footer__copy">&copy; <span id="footerYear">2026</span> Rishabh Singh. All rights reserved.</span>
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating "Speak to me" Pill -->
+  <div id="xsFloatPill" class="xs-float-pill">
+    <span class="xs-float-pill__text">
+      <strong>Speak to me</strong>
+      <span>Email or book a call</span>
+    </span>
+    <span class="xs-float-pill__icons">
+      <a href="mailto:imrishabhsingh2@gmail.com" class="xs-float-pill__icon xs-float-pill__icon--fill" aria-label="Email me">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </a>
+      <a href="index.html#contact" class="xs-float-pill__icon" aria-label="Book a call">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </a>
+    </span>
+  </div>
+
+  <script>
+    (function(){
+      "use strict";
+
+      /* ---- 1. Scroll reveal (IntersectionObserver) ---- */
+      var revealEls = document.querySelectorAll('.xs-reveal');
+      if ('IntersectionObserver' in window && revealEls.length){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting){
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+        revealEls.forEach(function(el){ io.observe(el); });
+      } else {
+        revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      }
+
+      /* ---- 2. Floating "Speak to me" pill: hide near footer ---- */
+      var pill = document.getElementById('xsFloatPill');
+      var footer = document.getElementById('site-footer');
+      if (pill){
+        pill.classList.add('is-shown');
+        if (footer){
+          var footerObs = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+              if (entry.isIntersecting){ pill.classList.remove('is-shown'); }
+              else { pill.classList.add('is-shown'); }
+            });
+          }, { threshold: 0.2 });
+          footerObs.observe(footer);
+        }
+      }
+
+      /* ---- 3. Footer current year ---- */
+      var yearEl = document.getElementById('footerYear');
+      if (yearEl){ yearEl.textContent = new Date().getFullYear(); }
+
+      /* ---- 4. Back-to-top button ---- */
+      var backToTop = document.getElementById('backToTop');
+      if (backToTop){
+        backToTop.addEventListener('click', function(){
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ---- 5. Glassmorphic nav: intensify blur/opacity once the page scrolls ---- */
+      var siteHeader = document.querySelector('.hero__header');
+      if (siteHeader){
+        var updateHeaderGlass = function(){
+          if (window.scrollY > 24) siteHeader.classList.add('is-scrolled');
+          else siteHeader.classList.remove('is-scrolled');
+        };
+        updateHeaderGlass();
+        window.addEventListener('scroll', updateHeaderGlass, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>
