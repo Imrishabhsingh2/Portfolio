@@ -2323,17 +2323,38 @@ a:focus-visible, button:focus-visible {
   .testimonial-card {
     width: 260px;
   }
+  .site-footer__top {
+    align-items: flex-start;
+    text-align: left;
+  }
   .site-footer__grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem 1.25rem;
+    text-align: left;
   }
   .footer-col {
-    align-items: center;
+    align-items: flex-start;
+  }
+  /* Sitemap: left column, row 1 */
+  .footer-col:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  /* More: right column, spans both rows */
+  .footer-col:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  /* Get in Touch: left column, row 2, under Sitemap */
+  .footer-col:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
   }
   .site-footer__bottom {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
   .xs-float-pill {
     left: 1rem;
